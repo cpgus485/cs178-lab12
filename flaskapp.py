@@ -40,6 +40,8 @@ def analyze(word):
     for i in range(num_chars):
         if word[i] is "a" or "e" or "i" or "o" or "u":
             num_vowels += 1
+        else:
+            num_vowels = num_vowels
     
     return render_template('analyze.html',
                            word = word,
