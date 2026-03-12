@@ -37,8 +37,8 @@ def analyze(word):
 
     # Vowel Count
     num_vowels = 0
-    for i in range(num_chars):
-        if word[i] is "a" or "e" or "i" or "o" or "u":
+    for i in num_chars:
+        if i in "aeiouAEIOU":
             num_vowels += 1
         else:
             num_vowels = num_vowels
@@ -47,7 +47,6 @@ def analyze(word):
                            word = word,
                            num_chars=num_chars,
                            num_vowels=num_vowels)
-
 
 
 # ============================================================
