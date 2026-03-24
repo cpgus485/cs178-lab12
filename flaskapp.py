@@ -40,11 +40,15 @@ def analyze(word):
     for i in word.lower():
         if i in "aeiou": # DOES NOT WORK
             num_vowels += 1
-    
+
+    # Reversed Word
+    reversed_word = word[::-1]
+
     return render_template('analyze.html',
                            word = word,
                            num_chars=num_chars,
-                           num_vowels=num_vowels)
+                           num_vowels=num_vowels,
+                           reversed_word=reversed_word)
 
 
 # ============================================================
