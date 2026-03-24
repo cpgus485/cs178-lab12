@@ -37,11 +37,9 @@ def analyze(word):
 
     # Vowel Count
     num_vowels = 0
-    for i in num_chars:
-        if i in "aeiouAEIOU":
+    for i in word.lower():
+        if i in "aeiou": # DOES NOT WORK
             num_vowels += 1
-        else:
-            num_vowels = num_vowels
     
     return render_template('analyze.html',
                            word = word,
